@@ -3,7 +3,7 @@ import codecs
 import os
 
 
-VERSION = '0.0.1'
+VERSION = '0.0.4'
 DESCRIPTION = 'Data Preprocessing library'
 
 
@@ -15,8 +15,8 @@ setup(
     author_email="chiragnpatil@gmail.com",
     description=DESCRIPTION,
     packages=find_packages(),
-    install_requires=['numpy', 'pandas', 'matplotlib.pyplot'],
-    keywords=['python', 'video', 'stream', 'video stream', 'camera stream', 'sockets'],
+    install_requires=['numpy', 'pandas', 'matplotlib'],
+    keywords=['python'],
     classifiers=[
         "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",

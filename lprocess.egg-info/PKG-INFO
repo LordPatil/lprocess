@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: lprocess
-Version: 0.0.1
+Version: 0.0.4
 Summary: Data Preprocessing library
 Home-page: UNKNOWN
 Author: Chirag Patil
 Author-email: chiragnpatil@gmail.com
 License: UNKNOWN
-Keywords: python,video,stream,video stream,camera stream,sockets
+Keywords: python
 Platform: UNKNOWN
 Classifier: Development Status :: 1 - Planning
 Classifier: Intended Audience :: Developers
