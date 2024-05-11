@@ -3,7 +3,7 @@ import codecs
 import os
 
 
-VERSION = '0.0.4'
+VERSION = '0.0.6'
 DESCRIPTION = 'Data Preprocessing library'
 
 
