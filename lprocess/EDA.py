@@ -43,7 +43,7 @@ class EDA:
         print("\nSummary Statistics:")
         print(self.data.describe())
 
-    def plot_distributions(self, cols=None, figsize=(10, 6), plot_type='hist'):
+    def plot_distributions(self, cols=None, figsize=(20, 25), plot_type='hist', ncols = 2):
         """
         Plot distributions for specified columns in the dataset.
         """
@@ -52,9 +52,9 @@ class EDA:
     
         plt.figure(figsize=figsize)
         num_plots = len(cols)
-        rows = 2 if num_plots > 3 else 1
-        cols_per_row = 3 if num_plots > 3 else num_plots
-    
+        rows = (num_plots + ncols - 1) // ncols
+        cols_per_row = ncols
+        
         for i, col in enumerate(cols):
             plt.subplot(rows, cols_per_row, i+1)
             if self.data[col].dtypes == 'object':  # Check if the column is categorical
@@ -151,5 +151,3 @@ class EDA:
         self.plot_categorical_hist(col)
         plt.title(f"Distribution of {col}")
         plt.show()
-
-

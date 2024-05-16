@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: lprocess
-Version: 0.0.9
+Version: 0.0.10
 Summary: Data Preprocessing library that makes EDA easy for all
 Home-page: UNKNOWN
 Author: Chirag Patil
@@ -9,7 +9,7 @@ License: UNKNOWN
 Keywords: python
 Platform: UNKNOWN
 Classifier: Development Status :: 1 - Planning
-Classifier: Intended Audience :: Data scientists
+Classifier: Intended Audience :: Developers
 Classifier: Programming Language :: Python :: 3
 Classifier: Operating System :: Unix
 Classifier: Operating System :: MacOS :: MacOS X
