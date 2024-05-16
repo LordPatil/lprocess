@@ -92,7 +92,7 @@ class EDA:
         """
         Plot a histogram for a numerical column.
         """
-        plt.hist(self.data[col].dropna(), bins='auto', density=True, alpha=0.5)
+        plt.hist(self.data[col].dropna(),  density=True, alpha=0.5, ec="red")
 
     def plot_numerical_kde(self, col):
         """
@@ -100,8 +100,9 @@ class EDA:
         """
         values = self.data[col].dropna().values
         kde = self.calc_kde(values)
-        x_grid = np.linspace(values.min(), values.max(), 200)
-        plt.plot(x_grid, kde(x_grid))
+        x_grid = np.linspace(values.min(), values.max(), len(values))
+        y_grid = kde(x_grid)
+        plt.plot(x_grid, y_grid)
 
     def calc_kde(self, data):
         """
@@ -109,7 +110,8 @@ class EDA:
         """
         bandwidth = 1.06 * data.std() * len(data) ** (-1/5)
         kernel = self.gaussian_kernel(bandwidth)
-        return lambda x: np.mean(kernel((x - data[:, None])/bandwidth), axis=1)
+        data = data[:, np.newaxis]  # Add a new axis to make data 2D
+        return lambda x: np.mean(kernel((x - data) / bandwidth), axis=1)
 
     def gaussian_kernel(self, bandwidth):
         """
@@ -149,3 +151,5 @@ class EDA:
         self.plot_categorical_hist(col)
         plt.title(f"Distribution of {col}")
         plt.show()
+
+

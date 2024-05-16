@@ -3,8 +3,8 @@ import codecs
 import os
 
 
-VERSION = '0.0.8'
-DESCRIPTION = 'Data Preprocessing library'
+VERSION = '0.0.9'
+DESCRIPTION = 'Data Preprocessing library that makes EDA easy for all'
 
 
 # Setting up
@@ -19,7 +19,7 @@ setup(
     keywords=['python'],
     classifiers=[
         "Development Status :: 1 - Planning",
-        "Intended Audience :: Developers",
+        "Intended Audience :: Data scientists",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
