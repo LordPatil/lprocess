@@ -3,7 +3,7 @@ import codecs
 import os
 
 
-VERSION = '0.0.10'
+VERSION = '0.0.11'
 DESCRIPTION = 'Data Preprocessing library that makes EDA easy for all'
 
 
@@ -15,7 +15,7 @@ setup(
     author_email="chiragnpatil@gmail.com",
     description=DESCRIPTION,
     packages=find_packages(),
-    install_requires=['numpy', 'pandas', 'matplotlib'],
+    install_requires=['numpy', 'pandas', 'matplotlib','seaborn'],
     keywords=['python'],
     classifiers=[
         "Development Status :: 1 - Planning",
